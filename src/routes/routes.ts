@@ -4,5 +4,6 @@ export default {
   },
   contacts: {
     root: "/contacts",
+    detail: "/contacts/:id",
   },
 };
