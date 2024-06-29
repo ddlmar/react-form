@@ -1,10 +1,10 @@
-import Contact from "@/app/Contact";
+import ListContacts from "@/app/ListContacts";
 import Home from "@/app/Home";
 import ErrorPage from "@/error-page";
 import { RouteObject } from "react-router-dom";
 import routes from "./routes";
 
-import { loader } from "@/app/Contact/loader";
+import { loaderContacts } from "@/app/ListContacts/loader";
 
 export const browserRouter: Array<RouteObject> = [
   {
@@ -14,8 +14,8 @@ export const browserRouter: Array<RouteObject> = [
   },
   {
     path: routes.contacts.root,
-    element: <Contact />,
-    loader,
+    element: <ListContacts />,
+    loader: loaderContacts,
     errorElement: <ErrorPage />,
   },
 ];
