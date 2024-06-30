@@ -5,7 +5,6 @@ import { RouteObject } from "react-router-dom";
 import routes from "./routes";
 
 import DetailContact from "@/app/Contacts/DetailContact";
-import { loaderContacts } from "@/app/Contacts/ListContacts/loader";
 
 export const browserRouter: Array<RouteObject> = [
   {
@@ -16,13 +15,10 @@ export const browserRouter: Array<RouteObject> = [
   {
     path: routes.contacts.root,
     element: <ListContacts />,
-    children: [
-      {
-        path: routes.contacts.detail,
-        element: <DetailContact />,
-      },
-    ],
-    loader: loaderContacts,
     errorElement: <ErrorPage />,
+  },
+  {
+    path: routes.contacts.detail,
+    element: <DetailContact />,
   },
 ];
