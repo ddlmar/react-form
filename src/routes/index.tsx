@@ -5,6 +5,7 @@ import { RouteObject } from "react-router-dom";
 import routes from "./routes";
 
 import DetailContact from "@/app/Contacts/DetailContact";
+import CreateContact from "@/app/Contacts/CreateContact";
 
 export const browserRouter: Array<RouteObject> = [
   {
@@ -20,5 +21,9 @@ export const browserRouter: Array<RouteObject> = [
   {
     path: routes.contacts.detail,
     element: <DetailContact />,
+  },
+  {
+    path: routes.contacts.create,
+    element: <CreateContact />,
   },
 ];

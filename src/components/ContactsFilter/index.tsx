@@ -38,7 +38,6 @@ const ContactsFilter: React.FC<ContactsFilterProps> = ({ paramsKey }) => {
 
   return (
     <Input
-      className="text-slate-800"
       placeholder="search"
       {...register(paramsKey)}
       onChange={(e) => onSearch(e.target.value)}
