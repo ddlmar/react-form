@@ -38,7 +38,7 @@ const ContactsFilter: React.FC<ContactsFilterProps> = ({ paramsKey }) => {
 
   return (
     <Input
-      placeholder="search"
+      placeholder={paramsKey}
       {...register(paramsKey)}
       onChange={(e) => onSearch(e.target.value)}
     />
